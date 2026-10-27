@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="2号機 Pico版キューブの組み立て参考資料。内側から外側への配置順を動画とCGで確認し、未確定の取り付け寸法と実物確認事項を確認できます。">
+  <meta name="description" content="2号機 Pico版キューブの配置参考資料。実際に組み立てやすい手順を確認するため、部品の干渉・挿入経路・工具アクセスを再検討しています。">
   <meta name="color-scheme" content="light">
-  <title>Picoキューブ｜内側から組み立てる参考ガイド</title>
+  <title>Picoキューブ｜組み立て手順の検証状況</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="guide.js" defer></script>
@@ -15,7 +15,7 @@
   <header class="masthead">
     <a class="wordmark" href="#main">PICO <span>組み立てノート</span></a>
     <nav aria-label="ページ内">
-      <a href="#body-guide">本体の順序</a>
+      <a href="#body-guide">検証状況</a>
       <a href="#checks">確認事項</a>
       <a href="#pcb-guide">基板</a>
       <a href="#views">CG</a>
@@ -23,54 +23,22 @@
   </header>
   <main id="main">
     <div class="intro">
-      <p class="utility">2号機 / PICO CUBE / ASSEMBLY REFERENCE</p>
-      <h1>内側から、<br>最後に外側を閉じる。</h1>
-      <p class="lede">内部のモーター・支持部・ホルダー・基板から配置を確認。コーナーとモーター側の支持部・ハブ・ホイールを経て、残る外側の3面を最後に取り付けます。</p>
-      <p class="reference-note"><strong>実物の組み立てを保証する手順書ではありません。</strong> 動画は部品の配置順を示す参考アニメーションです。作業前に<a href="#checks">未確定事項</a>を確認してください。</p>
+      <p class="utility">2号機 / PICO CUBE / ASSEMBLY UNDER REVIEW</p>
+      <h1>実際に組める手順を、<br>確認しています。</h1>
+      <p class="lede">大切なのは「内側から」という順番ではなく、部品が干渉せず、工具が入り、固定できること。組み立てやすい工程にするため、元の3D形状と取り付け条件の確認が必要です。</p>
+      <p class="reference-note"><strong>本体の組み立て動画と手順案は公開を停止しています。</strong> 挿入経路や締結の成立を検証できていないため、以前の配置順を実際の組み立て手順として使用しないでください。</p>
     </div>
 
     <section id="body-guide" aria-labelledby="body-title">
       <div class="section-heading">
-        <div><p class="utility">BODY / INSIDE → OUTSIDE</p><h2 id="body-title">本体の配置順を確認する</h2></div>
-        <span class="tag">内側からの修正版</span>
+        <div><p class="utility">BODY / VALIDATION NEEDED</p><h2 id="body-title">手順を示す前に確かめること</h2></div>
+        <span class="tag">組み立て工程は未確定</span>
       </div>
-      <div class="assembly-workbench">
-        <div class="screen">
-          <video id="body-video" controls playsinline preload="metadata" poster="assets/pico-inside-before-outer-v2.png" aria-label="Pico本体の内側から外側への組み立て参考動画" aria-describedby="body-video-note">
-            <source src="assets/pico-body-inside-out-v2.mp4" type="video/mp4">
-            お使いのブラウザーでは動画を再生できません。下のリンクからMP4を開いてください。
-          </video>
-          <p id="body-video-note" class="caption">画面内の説明とあわせて、配置の順序を確認してください。表示上の移動は、実物の挿入経路を保証しません。</p>
-          <p class="video-error" role="status" hidden>動画を読み込めませんでした。MP4の直接リンクを開くか、時間をおいて再読み込みしてください。</p>
-          <a class="file-link" href="assets/pico-body-inside-out-v2.mp4">本体の参考動画をMP4で開く ↗</a>
-          <p class="caption"><a href="assets/pico-inside-before-outer-v2.png">外側を閉じる前の注記付きCGを開く ↗</a></p>
-        </div>
-        <aside class="sequence" aria-labelledby="sequence-title">
-          <p class="utility">配置順 / 内部を先に</p>
-          <h3 id="sequence-title">外側の3面は最後に</h3>
-          <ol class="stage-list">
-            <li><strong>内部の部品</strong>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=0" data-video="body-video" data-time="0"><time>00:00</time> モーターユニット</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=3" data-video="body-video" data-time="3"><time>00:03</time> モーター支持部品</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=6" data-video="body-video" data-time="6"><time>00:06</time> 基板・IMUの支持具</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=9" data-video="body-video" data-time="9"><time>00:09</time> 基板を仮取付</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=12" data-video="body-video" data-time="12"><time>00:12</time> 内部の確認</a>
-            </li>
-            <li><strong>コーナーとモーター側</strong>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=15" data-video="body-video" data-time="15"><time>00:15</time> コーナーを仮組み</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=18" data-video="body-video" data-time="18"><time>00:18</time> モーター側の支持フレーム</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=21" data-video="body-video" data-time="21"><time>00:21</time> ハブ／フランジ</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=24" data-video="body-video" data-time="24"><time>00:24</time> ホイール</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=27" data-video="body-video" data-time="27"><time>00:27</time> 元データ内の固定部品</a>
-            </li>
-            <li><strong>残る外側の3面を最後に</strong>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=30" data-video="body-video" data-time="30"><time>00:30</time> 外側の1面目</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=33" data-video="body-video" data-time="33"><time>00:33</time> 外側の2面目</a>
-              <a class="chapter-link" href="assets/pico-body-inside-out-v2.mp4#t=36" data-video="body-video" data-time="36"><time>00:36</time> 最後の開口を閉じる</a>
-            </li>
-          </ol>
-          <p class="caption">全41秒。時刻を選ぶとその位置で一時停止します。再生は動画の操作ボタンから。読み込み前・JavaScript無効時はMP4を直接開きます。</p>
-        </aside>
+      <div class="check-grid">
+        <article><h3>移動中の干渉</h3><p>完成位置だけでなく、部品を取り付ける途中で他の部品を通り抜けないか確認します。干渉する動きを説明用の演出で済ませないことが必要です。</p></article>
+        <article><h3>工程と締結の順番</h3><p>先に組める小さな部品群、後から取り付ける部品、ネジを締めるタイミングを整理し、工具や手が入らなくなる順序を避ける必要があります。</p></article>
+        <article><h3>支持・保持と実物寸法</h3><p>作業途中の部品をどう支えるか、固定具や実物の寸法が成立するかを確認する必要があります。CGの空中配置だけでは工程の成立を判断できません。</p></article>
+        <article><h3>確認済みと未確認を区別</h3><p>CAD上の形状確認、工具の作業空間、実物での組み立て確認は別のものです。裏付けのない工程を実行可能な手順として案内しません。</p></article>
       </div>
     </section>
 
@@ -99,7 +67,7 @@
           <p class="video-error" role="status" hidden>動画を読み込めませんでした。MP4の直接リンクを開くか、時間をおいて再読み込みしてください。</p>
           <a class="file-link" href="assets/01_Pico_PCB_assembly.mp4">基板の参考動画をMP4で開く ↗</a>
         </div>
-        <div class="pcb-note"><h3>基板の位置と、固定の確定は別です。</h3><p>参考動画で位置関係を確認しても、取り付け穴とスペーサーの照合は必要です。本体の配置順とあわせて、穴のずれと省略部品を確認してください。</p><a href="#checks">取り付け前の確認事項へ ↑</a></div>
+        <div class="pcb-note"><h3>基板の位置と、固定の確定は別です。</h3><p>参考動画で位置関係を確認しても、取り付け穴とスペーサーの照合は必要です。基板を取り付ける前に、穴のずれと省略部品を確認してください。</p><a href="#checks">取り付け前の確認事項へ ↑</a></div>
       </div>
     </section>
 

@@ -39,21 +39,10 @@ p { margin: 0 0 14px; }
 section { scroll-margin-top: 20px; margin-bottom: 58px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 20px; }
 .tag { display: inline-block; flex-shrink: 0; border: 1px solid var(--line); padding: 3px 10px; font-size: .73rem; color: var(--steel); border-radius: 3px; }
-.assembly-workbench { display: grid; grid-template-columns: minmax(0, 1fr) 330px; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: var(--white); }
 .screen { min-width: 0; padding: 18px; }
 video { display: block; width: 100%; aspect-ratio: 5 / 4; background: var(--ink); object-fit: contain; border-radius: 2px; }
 .caption { font-size: .78rem; line-height: 1.8; color: var(--steel); margin: 12px 0 8px; }
 .file-link { font-size: .8rem; }
-.sequence { border-left: 1px solid var(--line); padding: 24px; background: var(--paper); }
-.stage-list { list-style: none; counter-reset: stage; padding: 0; margin: 24px 0 0; }
-.stage-list li { counter-increment: stage; position: relative; margin-left: 12px; padding: 0 0 24px 24px; border-left: 2px solid var(--line); }
-.stage-list li:last-child { padding-bottom: 0; border-left-color: transparent; }
-.stage-list li::before { content: counter(stage); position: absolute; left: -13px; top: 1px; width: 24px; height: 24px; border-radius: 50%; background: var(--steel); color: var(--white); text-align: center; font: 12px/24px ui-monospace, SFMono-Regular, Menlo, monospace; }
-.stage-list strong { font-size: .9rem; }
-.stage-list p { font-size: .8rem; margin: 6px 0 0; }
-.chapter-link { display: block; font-size: .76rem; padding-block: 4px; }
-.chapter-link time { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .7rem; }
-.chapter-link[aria-current="true"] { font-weight: 700; background: var(--white); text-decoration-thickness: 2px; }
 .checks { border-top: 3px solid var(--amber); padding: 24px; background: var(--white); border-radius: 3px; }
 .check-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 36px; }
 .check-grid article { border-top: 1px solid var(--line); padding-top: 16px; }
@@ -71,9 +60,6 @@ figcaption span { color: var(--steel); }
 footer { border-top: 1px solid var(--line); padding-block: 28px 40px; font-size: .77rem; color: var(--steel); }
 footer p { max-width: 850px; }
 @media (max-width: 900px) {
-  .assembly-workbench { grid-template-columns: 1fr; }
-  .sequence { border-left: 0; border-top: 1px solid var(--line); }
-  .stage-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .pcb-grid { grid-template-columns: 1fr; gap: 20px; }
   .pcb-note { padding: 0; }
 }
@@ -85,8 +71,7 @@ footer p { max-width: 850px; }
   .section-heading { align-items: start; flex-direction: column; gap: 10px; }
   .section-heading .caption { margin: 0; }
   .screen { padding: 10px; }
-  .sequence, .checks { padding: 20px 16px; }
-  .stage-list { display: block; }
+  .checks { padding: 20px 16px; }
   .check-grid, .gallery { grid-template-columns: 1fr; gap: 24px; }
   section { margin-bottom: 40px; }
 }
