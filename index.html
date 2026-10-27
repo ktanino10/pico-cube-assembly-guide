@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="2号機 Pico版キューブの配置参考資料。実際に組み立てやすい手順を確認するため、部品の干渉・挿入経路・工具アクセスを再検討しています。">
+  <meta name="description" content="2号機 Pico版キューブの全体外観・配置を動画とCGで確認する参考資料。全体外観動画は組み立て手順ではありません。挿入経路・締結・工具アクセスの検証状況を明示しています。">
   <meta name="color-scheme" content="light">
-  <title>Picoキューブ｜組み立て手順の検証状況</title>
+  <title>Picoキューブ｜全体外観と組み立て手順の検証状況</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="guide.js" defer></script>
@@ -15,6 +15,7 @@
   <header class="masthead">
     <a class="wordmark" href="#main">PICO <span>組み立てノート</span></a>
     <nav aria-label="ページ内">
+      <a href="#overview">全体の動画</a>
       <a href="#body-guide">検証状況</a>
       <a href="#checks">確認事項</a>
       <a href="#pcb-guide">基板</a>
@@ -23,11 +24,35 @@
   </header>
   <main id="main">
     <div class="intro">
-      <p class="utility">2号機 / PICO CUBE / ASSEMBLY UNDER REVIEW</p>
-      <h1>実際に組める手順を、<br>確認しています。</h1>
-      <p class="lede">大切なのは「内側から」という順番ではなく、部品が干渉せず、工具が入り、固定できること。組み立てやすい工程にするため、元の3D形状と取り付け条件の確認が必要です。</p>
+      <p class="utility">2号機 / PICO CUBE / OVERALL VIEW</p>
+      <h1>全体の配置を見る。<br>組み立て手順は検証中。</h1>
+      <p class="lede">キューブ全体の形と部品の位置関係を、周回するカメラで確認できます。組み立てでは「内側から」という順番だけでなく、部品が干渉せず、工具が入り、固定できることの確認が必要です。</p>
       <p class="reference-note"><strong>本体の組み立て動画と手順案は公開を停止しています。</strong> 挿入経路に部品同士の干渉が見つかったため、以前の手順案を撤回しました。完成位置に収まるだけでは組み立て可能とは判断できません。以前の配置順を実際の組み立て手順として使用しないでください。</p>
     </div>
+
+    <section id="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <div><p class="utility">OVERALL VIEW / CAMERA ORBIT</p><h2 id="overview-title">全体外観・配置の参考動画</h2></div>
+        <span class="tag">組み立て手順ではありません</span>
+      </div>
+      <div class="pcb-grid">
+        <div class="screen">
+          <video id="overview-video" controls playsinline preload="metadata" poster="assets/pico-overview-orbit-poster.png" aria-label="Picoキューブ全体の外観と配置を周囲から見る参考動画" aria-describedby="overview-video-note">
+            <source src="assets/pico-overview-orbit.mp4" type="video/mp4">
+            お使いのブラウザーでは動画を再生できません。下のリンクからMP4を開いてください。
+          </video>
+          <p id="overview-video-note" class="caption">全16秒・音声なし。部品はモデルの完成配置に固定し、カメラだけが周囲を回ります。部品の取り付け順や挿入経路を示す動画ではありません。</p>
+          <p class="video-error" role="status" hidden>動画を読み込めませんでした。MP4の直接リンクを開くか、時間をおいて再読み込みしてください。</p>
+          <a class="file-link" href="assets/pico-overview-orbit.mp4">全体外観の参考動画をMP4で開く ↗</a>
+        </div>
+        <div class="pcb-note">
+          <h3>全体の見え方と、組み立てられることは別です。</h3>
+          <p>この動画は形と配置を見るためのものです。モデル上の完成配置であり、実際に組み立てが成立することや、通電・回転の安全性を確認した映像ではありません。</p>
+          <p>基板は仮配置、電子部品の外形は概略です。IMU本体・配線・バッテリーは含まれません。</p>
+          <a href="#body-guide">組み立て手順の検証状況へ ↓</a>
+        </div>
+      </div>
+    </section>
 
     <section id="body-guide" aria-labelledby="body-title">
       <div class="section-heading">
